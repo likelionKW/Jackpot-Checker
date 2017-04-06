@@ -21,19 +21,19 @@ class LottoController < ApplicationController
     end
 
     if match_numbers.count == 6
-      grade = 1
+      grade = "1등"
     elsif match_numbers.count == 5
       if bonus_number.include? my_numbers
-        grade = 2
+        grade = "2등"
       else
-        grade = 3
+        grade = "3등"
       end
     elsif match_numbers.count == 4
-      grade = 4
+      grade = "4등"
     elsif match_numbers.count == 5
-      grade = 3
+      grade = "5등"
     else
-      grade = 0
+      grade = "꽝"
     end
 
     @my_numbers = my_numbers
